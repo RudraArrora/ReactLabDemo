@@ -1,0 +1,14 @@
+import { useEffect, useState } from "react";
+
+export default function UseEffectLab() {
+//
+//
+  return (
+    <div className="card">
+      <p className="muted">useEffect runs after render. Cleanup stops leaks.</p>
+      {/*  */}
+      <div className="big"></div>
+      <p className="muted">Switch hook tab → timer stops (cleanup works).</p>
+    </div>
+  );
+}

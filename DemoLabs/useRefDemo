@@ -1,0 +1,29 @@
+import { useEffect, useRef, useState } from "react";
+
+export default function UseRefLab() {
+  //
+  //
+  //
+
+  //
+
+  return (
+    <div className="card">
+      <p className="muted">
+        useRef stores values without re-render + can reference DOM.
+      </p>
+
+      <div className="row">
+        {/* */}
+        <input placeholder="Type…" />
+        {/* */}
+        <button className="btn primary">Focus</button>
+      </div>
+
+      <div className="result">
+        {/* */}
+        Previous value (ref):
+      </div>
+    </div>
+  );
+}
