@@ -9,6 +9,8 @@ export default function UseRefLab() {
     prevRef.current = text;
   }, [text]);
 
+  //
+
   return (
     <div className="card">
       <p className="muted">
@@ -16,23 +18,20 @@ export default function UseRefLab() {
       </p>
 
       <div className="row">
-        <input
-          ref={inputRef}
-          className="input"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          placeholder="Type…"
-        />
-        <button
-          className="btn primary"
-          onClick={() => inputRef.current?.focus()}
-        >
-          Focus
-        </button>
+      <input 
+      ref={inputRef}
+      className="input"
+      value={text}
+      onChange={(e)=>setText(e.target.value)}
+      placeholder="Type....."
+      />
+        <button className="btn primary"
+        onClick={()=>inputRef.current?.focus()}>Focus</button>
       </div>
 
       <div className="result">
-        Previous value (ref): <b>{prevRef.current || "—"}</b>
+        
+        Previous value (ref):<b>{prevRef.current||"-"}</b>
       </div>
     </div>
   );

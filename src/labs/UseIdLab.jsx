@@ -5,7 +5,7 @@ function Field({ label }) {
   return (
     <div className="col">
       <label className="muted" htmlFor={id}>
-        {label}
+        {label} {"and the feild id is"} {id}
       </label>
       <input
         id={id}

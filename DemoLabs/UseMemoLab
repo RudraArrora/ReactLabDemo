@@ -1,0 +1,29 @@
+import { useMemo, useState } from "react";
+
+export default function UseMemoLab() {
+  //
+  //
+
+  //
+  {
+    /**/
+  }
+  return (
+    <div className="card">
+      <p className="muted">
+        useMemo caches derived computation (until deps change).
+      </p>
+
+      <div className="row">
+        {/**/}
+        <input className="input" />
+        {/**/}
+        <button className="btn">Unrelated:</button>
+      </div>
+      {/**/}
+      <div className="result">
+        Sum(0..{n - 1}) = <b>{}</b>
+      </div>
+    </div>
+  );
+}

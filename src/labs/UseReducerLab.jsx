@@ -6,6 +6,7 @@ function reducer(state, action) {
   switch (action.type) {
     case "inc":
       return { ...state, count: state.count + 1 };
+
     case "dec":
       return { ...state, count: state.count - 1 };
     case "setStatus":
@@ -17,7 +18,7 @@ function reducer(state, action) {
 
 export default function UseReducerLab() {
   const [state, dispatch] = useReducer(reducer, initial);
-
+  console.log("you came from reducer.....");
   return (
     <div className="card">
       <p className="muted">

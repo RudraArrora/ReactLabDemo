@@ -1,0 +1,16 @@
+import { createContext, useContext, useState } from "react";
+
+//
+
+{/* */}
+
+export default function UseContextLab() {
+//
+
+  return (
+    <div className="card">
+      <p className="muted">useContext reads values without prop drilling.</p>
+     {/* */}
+    </div>
+  );
+}
