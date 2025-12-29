@@ -1,17 +1,16 @@
 import { useMemo, useState } from "react";
-import UseMemoLab from "./labs/UseMemoLab.jsx"; 
-import UseCallbackLab from "./labs/UseCallbackLab.jsx"; 
-import UseContextLab from "./labs/UseContextLab.jsx"; 
+import UseMemoLab from "./labs/UseMemoLab.jsx";
+import UseCallbackLab from "./labs/UseCallbackLab.jsx";
+import UseContextLab from "./labs/UseContextLab.jsx";
 import UseReducerLab from "./labs/UseReducerLab.jsx";
 import UseStateLab from "./labs/UseStateLab.jsx";
 import UseEffectLab from "./labs/UseEffectLab.jsx";
 import UseRefLab from "./labs/UseRefLab.jsx";
 import UseIdLab from "./labs/UseIdLab.jsx";
-
-import CustomHookLab from "./labs/CustomHookLab.jsx";          
-import UseLayoutEffectLab from "./labs/UseLayoutEffectLab.jsx";  
-import UseTransitionLab from "./labs/UseTransitionLab.jsx";      
-import UseDeferredValueLab from "./labs/UseDeferredValueLab.jsx"; 
+import UseToggleDemo from "./labs/UseToggleDemo.jsx";
+import UseInputDemo from "./labs/UseInputDemo.jsx";
+import UseDebounceDemo from "./labs/UseDebounceDemo.jsx";
+import UsePreviousDemo from "./labs/UsePreviousDemo.jsx";
 
 const LABS = [
   {
@@ -37,7 +36,7 @@ const LABS = [
     key: "useMemo",
     title: "Cached Derived Value",
     Comp: UseMemoLab,
-  }, 
+  },
   {
     day: "Day 2",
     key: "useCallback",
@@ -49,7 +48,7 @@ const LABS = [
     key: "useContext",
     title: "No Prop Drilling",
     Comp: UseContextLab,
-  }, 
+  },
   {
     day: "Day 2",
     key: "useReducer",
@@ -58,27 +57,27 @@ const LABS = [
   },
   {
     day: "Day 3",
-    key: "customHook",
-    title: "Persisted State Hook",
-    Comp: CustomHookLab,
-  }, 
+    key: "useToggle",
+    title: "Custom Hook: Toggle",
+    Comp: UseToggleDemo,
+  },
   {
     day: "Day 3",
-    key: "useLayoutEffect",
-    title: "Measure DOM Before Paint",
-    Comp: UseLayoutEffectLab,
-  }, 
+    key: "useInput",
+    title: "Custom Hook: Input",
+    Comp: UseInputDemo,
+  },
   {
     day: "Day 3",
-    key: "useTransition",
-    title: "Smooth Heavy Updates",
-    Comp: UseTransitionLab,
-  }, 
+    key: "useDebounce",
+    title: "Custom Hook: Debounce",
+    Comp: UseDebounceDemo,
+  },
   {
     day: "Day 3",
-    key: "useDeferredValue",
-    title: "Smooth Typing UX",
-    Comp: UseDeferredValueLab,
+    key: "usePrevious",
+    title: "Custom Hook: Previous",
+    Comp: UsePreviousDemo,
   },
   { day: "Day 1", key: "useId", title: "Accessible Form IDs", Comp: UseIdLab },
 ];
@@ -122,7 +121,7 @@ export default function App() {
 
       <div className="layout">
         <aside className="nav glass">
-          {["Day 1","Day 2", "Day 3"].map((d) => (
+          {["Day 1", "Day 2", "Day 3"].map((d) => (
             <div key={d} className="group">
               <div className="groupTitle">{d}</div>
 

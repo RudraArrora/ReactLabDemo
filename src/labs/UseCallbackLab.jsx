@@ -10,18 +10,20 @@ const Child = memo(function Child({ label, onAdd }) {
 });
 
 export default function UseCallbackDifference() {
-  const [count, setCount] = useState(0);
-  const [text, setText] = useState("");
+const [count,setCount]=useState(0);
+const [text,setText]=useState("");
+  
 
-  // ✅ Stable function: same reference on every render
-  const addStable = useCallback(() => {
-    setCount((c) => c + 1);
-  }, []);
 
-  // ❌ New function every render: different reference each time
-  const addNormal = () => {
-    setCount((c) => c + 1);
-  };
+const addStable = useCallback(()=>{
+  setCount((c)=>c+1);
+},[])
+
+const addNormal=()=>{
+  setCount((c)=>c+1);
+}
+
+  //
 
   return (
     <div className="card">
@@ -31,12 +33,11 @@ export default function UseCallbackDifference() {
       </p>
 
       <div className="row">
-        <input
-          className="input"
-          value={text}
-          placeholder="Type here (unrelated state)..."
-          onChange={(e) => setText(e.target.value)}
-        />
+        {/**/}
+        <input className="input" 
+        value={text}
+        placeholder="Type here"
+        onChange={(e)=>setText(e.target.value)}/>
       </div>
 
       <div className="row" style={{ justifyContent: "space-between" }}>
@@ -44,6 +45,7 @@ export default function UseCallbackDifference() {
       </div>
 
       <div className="row">
+        {/**/}
         <Child label="Add (useCallback ✅)" onAdd={addStable} />
         <Child label="Add (normal ❌)" onAdd={addNormal} />
       </div>
