@@ -1,0 +1,26 @@
+import { useToggle } from "../hooks/useToggle";
+
+export default function UseToggleDemo() {
+ //
+{/**/ }
+  return (
+    <div className="card">
+      <p className="muted">useToggle → perfect for show/hide.</p>
+
+      <div className="row">
+        {/**/}
+        <button className="btn primary">{/**/}</button>
+        {/**/}
+        <button className="btn">Force Open</button>
+        {/**/}
+        <button className="btn">Force Close</button>
+      </div>
+
+      {open && (
+        <div className="result">
+          ✅ I am visible now. Click toggle to hide me.
+        </div>
+      )}
+    </div>
+  );
+}
